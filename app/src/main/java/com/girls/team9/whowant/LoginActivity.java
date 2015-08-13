@@ -18,8 +18,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        signup_btn = (Button) findViewById(R.id.signup_btn);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        signup_btn= (Button) findViewById(R.id.signup_btn);
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("로그인");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -30,7 +30,5 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, SignupActivity.class));
             }
         });
-
-
     }
 }

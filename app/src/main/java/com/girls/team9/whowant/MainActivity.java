@@ -50,9 +50,15 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getGroupId() == R.id.group_a) {
                     navigationView.getMenu().setGroupCheckable(R.id.group_b, false, true);
                     navigationView.getMenu().setGroupCheckable(R.id.group_a, true, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_c, false, true);
                 } else if (menuItem.getGroupId() == R.id.group_b) {
                     navigationView.getMenu().setGroupCheckable(R.id.group_a, false, true);
                     navigationView.getMenu().setGroupCheckable(R.id.group_b, true, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_c, false, true);
+                }else if (menuItem.getGroupId() == R.id.group_c) {
+                    navigationView.getMenu().setGroupCheckable(R.id.group_a, false, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_b, false, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_c, true, true);
                 }
 
 
