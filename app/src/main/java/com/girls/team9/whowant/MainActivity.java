@@ -13,6 +13,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -49,9 +50,15 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getGroupId() == R.id.group_a) {
                     navigationView.getMenu().setGroupCheckable(R.id.group_b, false, true);
                     navigationView.getMenu().setGroupCheckable(R.id.group_a, true, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_c, false, true);
                 } else if (menuItem.getGroupId() == R.id.group_b) {
                     navigationView.getMenu().setGroupCheckable(R.id.group_a, false, true);
                     navigationView.getMenu().setGroupCheckable(R.id.group_b, true, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_c, false, true);
+                }else if (menuItem.getGroupId() == R.id.group_c) {
+                    navigationView.getMenu().setGroupCheckable(R.id.group_a, false, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_b, false, true);
+                    navigationView.getMenu().setGroupCheckable(R.id.group_c, true, true);
                 }
 
 
@@ -70,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.login:
-                        getSupportActionBar().setTitle("로그인");
+//                        getSupportActionBar().setTitle("로그인");
                         startActivity(new Intent(MainActivity.this, LoginActivity.class));
                         drawerLayout.closeDrawers();
                         isvisible = true;
@@ -78,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.signup:
-                        getSupportActionBar().setTitle("회원가입");
+//                        getSupportActionBar().setTitle("회원가입");
                         startActivity(new Intent(MainActivity.this, SignupActivity.class));
                         drawerLayout.closeDrawers();
                         isvisible = true;
@@ -86,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.basket:
-                        getSupportActionBar().setTitle("장바구니");
+//                        getSupportActionBar().setTitle("장바구니");
                         startActivity(new Intent(MainActivity.this, BasketActivity.class));
                         drawerLayout.closeDrawers();
                         isvisible = true;
@@ -94,13 +101,22 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.setting:
-                        getSupportActionBar().setTitle("설정");
+//                        getSupportActionBar().setTitle("설정");
                         startActivity(new Intent(MainActivity.this, SettingActivity.class));
                         drawerLayout.closeDrawers();
                         isvisible = false;
                         invalidateOptionsMenu();
                         return true;
 
+                    case R.id.request:
+//                        getSupportActionBar().setTitle("판매참여신청");
+                        drawerLayout.closeDrawers();
+                        Toast.makeText(getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT).show();
+
+                    case R.id.donation:
+//                        getSupportActionBar().setTitle("기부행사안내");
+                        drawerLayout.closeDrawers();
+                        Toast.makeText(getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT).show();
 
                 }
                 return true;
