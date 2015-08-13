@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, SettingActivity.class));
                         drawerLayout.closeDrawers();
                         isvisible = false;
-                        invalidateOptionsMenu();
+//                        invalidateOptionsMenu();
                         return true;
 
 
