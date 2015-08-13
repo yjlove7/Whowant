@@ -55,28 +55,15 @@ public class BestListFragment extends Fragment {
                         progressBar.setVisibility(View.VISIBLE);
                         items.clear();
 
-                        getListData();
+                        getList();
 
-//                        switch (cur_job) {
-//                            case 0:
-//                                getListData("plan");
-//                                break;
-//                            case 1:
-//                                getListData("dev");
-//                                break;
-//                            case 2:
-//                                getListData("dis");
-//                                break;
-//                            default:
-//                                break;
-//                        }
                     }
                 });
             }
         }).start();
     }
 
-    private void getListData() {
+    private void getList() {
 
         BestRecyclerItem item;
         item = new BestRecyclerItem(R.drawable.ex, "Test 에코백", "10,000 원");

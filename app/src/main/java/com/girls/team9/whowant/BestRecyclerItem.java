@@ -7,6 +7,7 @@ public class BestRecyclerItem {
     String name;
     String price;
     int picture;
+    int number;
 
     public String getName() {
         return name;
@@ -20,8 +21,19 @@ public class BestRecyclerItem {
         return price;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
     public BestRecyclerItem(int picture, String name, String price) {
         this.name = name;
+        this.picture = picture;
+        this.price = price;
+    }
+
+    public BestRecyclerItem(String name, int number, int picture, String price) {
+        this.name = name;
+        this.number = number;
         this.picture = picture;
         this.price = price;
     }

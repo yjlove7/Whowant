@@ -57,6 +57,8 @@ public class RecyclerAdpater extends RecyclerView.Adapter<RecyclerAdpater.ViewHo
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(context.getApplicationContext(), DetailAtivity.class);
+                        intent.putExtra("name", item_list.getName());
+                        intent.putExtra("price", item_list.getPrice());
                         context.startActivity(intent);
                     }
                 });//container.setOnClickListener
