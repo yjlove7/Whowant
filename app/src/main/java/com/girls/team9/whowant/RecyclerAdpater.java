@@ -53,6 +53,14 @@ public class RecyclerAdpater extends RecyclerView.Adapter<RecyclerAdpater.ViewHo
                 final BestRecyclerItem item_list = items_list.get(position);
                 holder.name.setText(item_list.getName());
                 holder.price.setText(item_list.getPrice());
+                holder.container.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(context.getApplicationContext(), DetailAtivity.class);
+                        context.startActivity(intent);
+                    }
+                });//container.setOnClickListener
+
                 break;
         }
     }

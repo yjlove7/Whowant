@@ -1,6 +1,5 @@
 package com.girls.team9.whowant;
 
-import android.app.SearchManager;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -72,9 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.basket:
                         getSupportActionBar().setTitle("장바구니");
-                        cur_fragment = new BasketFragment();
-                        fragmentTransaction.replace(R.id.container, cur_fragment);
-                        fragmentTransaction.commit();
+                        startActivity(new Intent(MainActivity.this, BasketActivity.class));
                         drawerLayout.closeDrawers();
                         isvisible = true;
                         invalidateOptionsMenu();
