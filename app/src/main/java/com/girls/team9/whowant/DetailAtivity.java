@@ -18,6 +18,7 @@ public class DetailAtivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("상세 페이지");
+
     }
 
 }//class
