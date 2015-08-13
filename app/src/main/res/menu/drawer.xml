@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_a"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/main"
+            android:checked="true"
+            android:title="메인"
+            />
+        <item
+            android:id="@+id/basket"
+            android:title="장바구니"
+            />
+
+    </group>
+    <group
+        android:id="@+id/group_b"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/setting"
+            android:title="설정"
+            />
+
+    </group>
+
+</menu>
