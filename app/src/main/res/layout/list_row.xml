@@ -12,10 +12,12 @@
             android:layout_height="20dp" />
         <TextView
             android:id="@+id/tv_group"
+            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="aa"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:textColor="#000000"/>
 
 </LinearLayout>

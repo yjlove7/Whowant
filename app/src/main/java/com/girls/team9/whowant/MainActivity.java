@@ -110,12 +110,12 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.request:
 //                        getSupportActionBar().setTitle("판매참여신청");
-                        drawerLayout.closeDrawers();
+//                        drawerLayout.closeDrawers();
                         Toast.makeText(getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT).show();
 
                     case R.id.donation:
 //                        getSupportActionBar().setTitle("기부행사안내");
-                        drawerLayout.closeDrawers();
+//                        drawerLayout.closeDrawers();
                         Toast.makeText(getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT).show();
 
                 }
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpNavDrawer() {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("소개");
+        getSupportActionBar().setTitle("WhoWant");
         toolbar.setNavigationIcon(R.drawable.drawericon);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
