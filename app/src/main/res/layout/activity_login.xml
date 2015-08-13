@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:focusable="true"
+                    android:id="@+id/splash_logo"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/ex"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Whowant"
+                    android:textColor="#FF6B89"
+                    android:fontFamily="sans-serif-thin"
+                    android:textSize="30dp"/>
+
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="아이디"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/id_text"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textSize="15dp"
+                    />
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="비밀번호"
+                    android:id="@+id/pass_text"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textSize="15dp"
+                    />
+
+
+                <Button
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#FF6B89"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:text="Login"
+                    android:id="@+id/login_btn"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+            <Button
+                android:layout_gravity="bottom|center"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="#ffffff"
+                android:text="Sign Up"
+                android:id="@+id/signup_btn"
+                android:layout_marginBottom="50dp"
+                />
+        </LinearLayout>
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:id="@+id/progressbar"/>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
+
