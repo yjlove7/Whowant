@@ -69,6 +69,22 @@ public class MainActivity extends AppCompatActivity {
                         invalidateOptionsMenu();
                         return true;
 
+                    case R.id.login:
+                        getSupportActionBar().setTitle("로그인");
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                        drawerLayout.closeDrawers();
+                        isvisible = true;
+                        invalidateOptionsMenu();
+                        return true;
+
+                    case R.id.signup:
+                        getSupportActionBar().setTitle("회원가입");
+                        startActivity(new Intent(MainActivity.this, SignupActivity.class));
+                        drawerLayout.closeDrawers();
+                        isvisible = true;
+                        invalidateOptionsMenu();
+                        return true;
+
                     case R.id.basket:
                         getSupportActionBar().setTitle("장바구니");
                         startActivity(new Intent(MainActivity.this, BasketActivity.class));
@@ -77,15 +93,13 @@ public class MainActivity extends AppCompatActivity {
                         invalidateOptionsMenu();
                         return true;
 
-//                    case R.id.setup:
-//                        getSupportActionBar().setTitle("설정");
-//                        cur_fragment = new SetupFragment();
-//                        fragmentTransaction.replace(R.id.container, cur_fragment);
-//                        fragmentTransaction.commit();
-//                        drawerLayout.closeDrawers();
-//                        isvisible = false;
-//                        invalidateOptionsMenu();
-//                        return true;
+                    case R.id.setting:
+                        getSupportActionBar().setTitle("설정");
+                        startActivity(new Intent(MainActivity.this, SettingActivity.class));
+                        drawerLayout.closeDrawers();
+                        isvisible = false;
+                        invalidateOptionsMenu();
+                        return true;
 
 
                 }
