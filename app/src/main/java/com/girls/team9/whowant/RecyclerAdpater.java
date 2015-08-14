@@ -51,12 +51,14 @@ public class RecyclerAdpater extends RecyclerView.Adapter<RecyclerAdpater.ViewHo
         switch (itemLayout) {
             case R.layout.item_best_recycler:
                 final BestRecyclerItem item_list = items_list.get(position);
+                holder.picture.setBackgroundResource(item_list.getPicture());
                 holder.name.setText(item_list.getName());
                 holder.price.setText(item_list.getPrice());
                 holder.container.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(context.getApplicationContext(), DetailAtivity.class);
+                        intent.putExtra("picture", item_list.getPicture());
                         intent.putExtra("name", item_list.getName());
                         intent.putExtra("price", item_list.getPrice());
                         context.startActivity(intent);

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,9 @@ public class DetailAtivity extends AppCompatActivity{
 
     TextView price;
     TextView name;
+
+    ImageView picture;
+    ImageView picture1;
 
     Button add_basket;
     Button buy;
@@ -37,9 +41,13 @@ public class DetailAtivity extends AppCompatActivity{
         price = (TextView)findViewById(R.id.price);
         add_basket = (Button)findViewById(R.id.add_basket);
         buy = (Button)findViewById(R.id.buy);
+        picture = (ImageView) findViewById(R.id.picture);
+        picture1 = (ImageView) findViewById(R.id.picture1);
 
         name.setText(intent.getStringExtra("name"));
         price.setText(intent.getStringExtra("price"));
+        picture.setBackgroundResource(intent.getIntExtra("picture", 0));
+        picture1.setBackgroundResource(intent.getIntExtra("picture", 0));
 
         add_basket.setOnClickListener(new View.OnClickListener() {
             @Override

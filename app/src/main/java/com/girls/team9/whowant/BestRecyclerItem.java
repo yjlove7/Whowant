@@ -1,5 +1,7 @@
 package com.girls.team9.whowant;
 
+import com.parse.ParseFile;
+
 /**
  * Created by hyemi on 2015-08-13.
  */

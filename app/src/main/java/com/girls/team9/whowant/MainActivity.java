@@ -97,10 +97,14 @@ public class MainActivity extends AppCompatActivity {
                         invalidateOptionsMenu();
                         return true;
 
-                    case R.id.login:
+                    case R.id.my:
 //                        getSupportActionBar().setTitle("로그인");
                         if(ParseUser.getCurrentUser() != null) {
-                            isvisible = false;
+                            Toast.makeText(getApplicationContext(), "로그인이 필요합니다.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                            drawerLayout.closeDrawers();
+                            isvisible = true;
+                            invalidateOptionsMenu();
                             return true;
                         } else {
                             startActivity(new Intent(MainActivity.this, LoginActivity.class));
@@ -109,14 +113,6 @@ public class MainActivity extends AppCompatActivity {
                             invalidateOptionsMenu();
                             return true;
                         }
-
-                    case R.id.signup:
-//                        getSupportActionBar().setTitle("회원가입");
-                        startActivity(new Intent(MainActivity.this, SignupActivity.class));
-                        drawerLayout.closeDrawers();
-                        isvisible = true;
-                        invalidateOptionsMenu();
-                        return true;
 
                     case R.id.basket:
 //                        getSupportActionBar().setTitle("장바구니");
