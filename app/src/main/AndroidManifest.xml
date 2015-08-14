@@ -29,7 +29,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".DetailAtivity" />
         </activity>
 
         <activity
@@ -63,6 +63,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LoginActivity" />
             </activity>
+
+        <activity
+            android:name=".PaymentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PaymentActivity" />
+        </activity>
 
     </application>
 

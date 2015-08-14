@@ -1,6 +1,5 @@
 package com.girls.team9.whowant;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +14,6 @@ import android.widget.Toast;
  */
 public class DetailAtivity extends AppCompatActivity{
     Intent intent;
-
     TextView price;
     TextView name;
 
@@ -62,6 +60,7 @@ public class DetailAtivity extends AppCompatActivity{
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(DetailAtivity.this, PaymentActivity.class));
 
             }
         });//buy.setOnClickListener
