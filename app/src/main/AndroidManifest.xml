@@ -40,6 +40,14 @@
                 android:value=".MainActivity" />
         </activity>
 
+        <activity android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SignupActivity"/>
+        </activity>
+
         <activity
             android:name=".SettingActivity"
             android:screenOrientation="portrait">
@@ -48,13 +56,6 @@
                 android:value=".SettingActivity" />
         </activity>
 
-        <activity
-            android:name=".SignupActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SignupActivity" />
-            </activity>
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait" >

@@ -45,8 +45,14 @@ public class DetailAtivity extends AppCompatActivity{
         add_basket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                add_basket.setText("장바구니 해제");
-                Toast.makeText(getApplicationContext(), "상품이 장바구니에 담겼습니다.", Toast.LENGTH_SHORT).show();
+                if (String.valueOf(add_basket.getText()).equals("장바구니 추가")) {
+                    add_basket.setText("장바구니 해제");
+                    Toast.makeText(getApplicationContext(), "상품이 장바구니에 담겼습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    add_basket.setText("장바구니 추가");
+                    Toast.makeText(getApplicationContext(), "해제되었습니다. 장바구니를 확인하세요", Toast.LENGTH_SHORT).show();
+                }
+//                Toast.makeText(getApplicationContext(), String.valueOf(add_basket.getText()), Toast.LENGTH_SHORT).show();
 
 
             }

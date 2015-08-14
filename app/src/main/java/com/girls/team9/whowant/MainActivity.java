@@ -13,7 +13,13 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.parse.Parse;
+import com.parse.ParseInstallation;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -30,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        Parse.enableLocalDatastore(this);
+
+        Parse.initialize(this, "L2yes9VmFrSxAwKDU942H4CUPyJCvAdV8uwdw6nN", "QT3lxiZv63TzWK47RPeh4uTFm3T42hIx8APbvrvU");
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
+
         startActivity(new Intent(this, SplashActivity.class));
 
         toolbar=(Toolbar)findViewById(R.id.toolbar);
@@ -43,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout=(DrawerLayout)findViewById(R.id.drawerlayout);
 
         navigationView=(NavigationView)findViewById(R.id.navigationView);
+
+        TextView user_name = (TextView) navigationView.findViewById(R.id.user_name);
+        ParseUser user = ParseUser.getCurrentUser();
+        if(user == null) {
+            user_name.setText("로그인을 해주세요.");
+        } else {
+            user_name.setText(user.getString("name")+"님 환영합니다.");
+        }
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -78,11 +99,16 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.login:
 //                        getSupportActionBar().setTitle("로그인");
-                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                        drawerLayout.closeDrawers();
-                        isvisible = true;
-                        invalidateOptionsMenu();
-                        return true;
+                        if(ParseUser.getCurrentUser() != null) {
+                            isvisible = false;
+                            return true;
+                        } else {
+                            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                            drawerLayout.closeDrawers();
+                            isvisible = true;
+                            invalidateOptionsMenu();
+                            return true;
+                        }
 
                     case R.id.signup:
 //                        getSupportActionBar().setTitle("회원가입");
