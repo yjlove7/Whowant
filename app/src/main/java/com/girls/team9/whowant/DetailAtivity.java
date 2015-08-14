@@ -14,6 +14,7 @@ import android.widget.Toast;
  */
 public class DetailAtivity extends AppCompatActivity{
     Intent intent;
+
     TextView price;
     TextView name;
 
